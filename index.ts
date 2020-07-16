@@ -16,6 +16,10 @@ export const countingStr: CountingString = {
   },
 };
 
+interface CountCharactersOption {
+  withSpaces: boolean;
+}
+
 export function countWords(inputString: string) {
   let splitWords = inputString.split(" ");
   return splitWords.length;
@@ -23,4 +27,11 @@ export function countWords(inputString: string) {
 export function countSpaces(inputString: string) {
   let splitWords = inputString.split(" ");
   return splitWords.length - 1;
+}
+export function countCharacters(inputString: string, options: CountCharactersOption) {
+  let inputCharacterSize = inputString.length;
+  let inputSpaceCharacterSize = inputString.split(" ").length - 1;
+  let inputCharacterSizeWithoutSpaces = inputCharacterSize - inputSpaceCharacterSize;
+  if (options.withSpaces) return inputCharacterSize;
+  return inputCharacterSizeWithoutSpaces;
 }

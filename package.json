@@ -1,0 +1,19 @@
+{
+  "name": "counting-str",
+  "version": "1.0.0",
+  "description": "Module for counting strings, characters length",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "strings",
+    "string-counter",
+    "string-length"
+  ],
+  "author": "vindecodex",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
+}

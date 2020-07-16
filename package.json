@@ -1,6 +1,6 @@
 {
   "name": "counting-str",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Module for counting strings, characters length",
   "main": "index.js",
   "scripts": {

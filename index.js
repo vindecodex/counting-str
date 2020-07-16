@@ -12,16 +12,22 @@ exports.countingStr = {
     }
 };
 function countWords(inputString) {
+    if (!inputString)
+        return 0;
     var splitWords = inputString.split(" ");
     return splitWords.length;
 }
 exports.countWords = countWords;
 function countSpaces(inputString) {
+    if (!inputString)
+        return 0;
     var splitWords = inputString.split(" ");
     return splitWords.length - 1;
 }
 exports.countSpaces = countSpaces;
 function countCharacters(inputString, options) {
+    if (!inputString)
+        return 0;
     var inputCharacterSize = inputString.length;
     var inputSpaceCharacterSize = inputString.split(" ").length - 1;
     var inputCharacterSizeWithoutSpaces = inputCharacterSize - inputSpaceCharacterSize;

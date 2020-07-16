@@ -1,21 +1,3 @@
-interface CountingString {
-  byWordsLength: number;
-  bySpacesLength: number;
-  countWords: (inputString: string)=>number;
-  countSpaces: (inputString: string)=>number;
-}
-
-export const countingStr: CountingString = {
-  byWordsLength: 0,
-  bySpacesLength: 0,
-  countWords: (inputString: string) => {
-    return 0;
-  },
-  countSpaces: (inputString: string) => {
-    return 0;
-  },
-};
-
 interface CountCharactersOption {
   withSpaces: boolean;
 }

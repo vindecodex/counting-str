@@ -2,6 +2,7 @@ const assert = require('assert');
 const { 
   countWords,
   countSpaces,
+  countCharacters,
 } = require('../index.js');
 
 
@@ -18,5 +19,17 @@ describe('Count Words', function() {
 describe('Count Spaces', function() {
   it('Should return 5', function() {
     assert.equal(countSpaces(input), 5);
+  });
+});
+
+describe('Count Characters with spaces', function() {
+  it('Should return 29', function() {
+    assert.equal(countCharacters(input, { withSpaces: true }), 29); 
+  });
+});
+
+describe('Count Characters without spaces', function() {
+  it('Should return 24', function() {
+    assert.equal(countCharacters(input, { withSpaces: false}), 24);
   });
 });

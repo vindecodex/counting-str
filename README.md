@@ -31,6 +31,12 @@ Count Characters without including spaces
 countCharacters("Hello World", { withSpaces: false });
 ```
 
+|Name           | Arguments                     |  Info                                                   |
+|---------------|-------------------------------|---------------------------------------------------------|
+|countWords     | String                        | returns # of words in a string                          |
+|countSpaces    | String                        | returns # of spaces in a string                         |
+|countCharacters| Object { withSpaces: boolean }| withSpaces: true returns # of characters included space |
+
 
 #### Feel free to open a pull request to add more features.
 - make clone

@@ -23,7 +23,7 @@ countWords("Hello World");
 
 Count Characters
 ```JavaScript
-const { countCharacters } require('counting-str');
+const { countCharacters } = require('counting-str');
 countCharacters("Hello World");
 ```
 
@@ -32,11 +32,25 @@ Count Characters without including spaces
 countCharacters("Hello World", { withSpaces: false });
 ```
 
+Count Vowels
+```JavaScript
+const { countVowels } = require('counting-str');
+countVowels("Hello World");
+```
+
+Count Spaces
+```JavaScript
+const { countSpaces } = require('counting-str');
+countSpaces("Hello World");
+```
+
 |Name           | Arguments                     |  Info                                                   |
 |---------------|-------------------------------|---------------------------------------------------------|
 |countWords     | String                        | returns # of words in a string                          |
 |countSpaces    | String                        | returns # of spaces in a string                         |
 |countCharacters| Object { withSpaces: boolean }| withSpaces: true returns # of characters included space |
+|countVowels     | String                        | returns # of vowels in a string 
+|countSpaces     | String                        | returns # of spaces in a string 
 
 
 #### Feel free to open a pull request to add more features.

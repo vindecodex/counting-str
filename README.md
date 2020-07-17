@@ -4,6 +4,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/vindecodex/counting-str?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/vindecodex/counting-str?style=flat-square)
 [![Build status](https://ci.appveyor.com/api/projects/status/ujaw4dlquf5sknbk?svg=true)](https://ci.appveyor.com/project/vindecodex/counting-str)
+![npm](https://img.shields.io/npm/dw/counting-str)
 
 #### Working Status
 :construction: Under Construction :construction:

@@ -57,5 +57,4 @@ countSpaces("Hello World");
 - make clone
 - create a pull request
 - feel free to open an issue
-
-
+- OPEN FOR BEGINNERS AND NEW CONTRIBUTORS

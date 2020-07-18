@@ -12,6 +12,9 @@
     "string-length"
   ],
   "author": "vindecodex",
+  "contributors": [
+    "Mayank Bucha <https://github.com/mayankbucha>"
+  ],
   "license": "MIT",
   "repository": "https://github.com/vindecodex/counting-str",
   "homepage": "https://github.com/vindecodex/counting-str",

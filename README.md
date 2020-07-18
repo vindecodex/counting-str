@@ -44,11 +44,11 @@ const { countSpaces } = require('counting-str');
 countSpaces("Hello World");
 ```
 
-|Name           | Arguments                     |  Info                                                   |
-|---------------|-------------------------------|---------------------------------------------------------|
-|countWords     | String                        | returns # of words in a string                          |
-|countSpaces    | String                        | returns # of spaces in a string                         |
-|countCharacters| Object { withSpaces: boolean }| withSpaces: true returns # of characters included space |
+|Name            | Arguments                     |  Info                                                   |
+|----------------|-------------------------------|---------------------------------------------------------|
+|countWords      | String                        | returns # of words in a string                          
+|countSpaces     | String                        | returns # of spaces in a string                         
+|countCharacters | Object { withSpaces: boolean }| withSpaces: true returns # of characters included space 
 |countVowels     | String                        | returns # of vowels in a string 
 |countSpaces     | String                        | returns # of spaces in a string 
 

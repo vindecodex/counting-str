@@ -53,8 +53,11 @@ countSpaces("Hello World");
 |countSpaces     | String                        | returns # of spaces in a string 
 
 
-#### Feel free to open a pull request to add more features.
+#### :handshaking: Feel free to open a pull request to add more features.
 - make clone
 - create a pull request
 - feel free to open an issue
 - OPEN FOR BEGINNERS AND NEW CONTRIBUTORS
+
+### How to Contribute ?
+[GUIDE FOR CONTRIBUTORS](/CONTRIBUTE-GUIDE.md)

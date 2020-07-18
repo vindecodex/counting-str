@@ -1,6 +1,8 @@
 "use strict";
+
 exports.__esModule = true;
-exports.countCharacters = exports.countSpaces = exports.countWords = exports.countingStr = void 0;
+exports.countCharacters = exports.countSpaces = exports.countWords = exports.countingStr = exports.countVowels = void 0;
+
 exports.countingStr = {
     byWordsLength: 0,
     bySpacesLength: 0,
@@ -11,6 +13,7 @@ exports.countingStr = {
         return 0;
     }
 };
+
 function countWords(inputString) {
     if (!inputString)
         return 0;
@@ -18,6 +21,7 @@ function countWords(inputString) {
     return splitWords.length;
 }
 exports.countWords = countWords;
+
 function countSpaces(inputString) {
     if (!inputString)
         return 0;
@@ -25,7 +29,8 @@ function countSpaces(inputString) {
     return splitWords.length - 1;
 }
 exports.countSpaces = countSpaces;
-function countCharacters(inputString, options) {
+
+function countCharacters(inputString, options = true) {
     if (!inputString)
         return 0;
     var inputCharacterSize = inputString.length;
@@ -36,3 +41,10 @@ function countCharacters(inputString, options) {
     return inputCharacterSizeWithoutSpaces;
 }
 exports.countCharacters = countCharacters;
+
+function countVowels(inputString) {
+    if(!inputString) 
+        return 0;
+    return (inputString.match(/[aeiou]/gi) || []).length;
+}
+exports.countVowels = countVowels;

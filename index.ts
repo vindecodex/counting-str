@@ -20,3 +20,7 @@ export function countCharacters(inputString: string, options: CountCharactersOpt
   if (options.withSpaces) return inputCharacterSize;
   return inputCharacterSizeWithoutSpaces;
 }
+export function countVowels(inputString: string) {
+  if (!inputString) return 0;
+  return (inputString.match(/[aeiou]/gi) || []).length;
+}

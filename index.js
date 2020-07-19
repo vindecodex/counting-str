@@ -27,6 +27,7 @@ function countSpaces(inputString) {
 }
 exports.countSpaces = countSpaces;
 function countCharacters(inputString, options) {
+    if (options === void 0) { options = { withSpaces: true }; }
     if (!inputString)
         return 0;
     var inputCharacterSize = inputString.length;
@@ -58,3 +59,9 @@ function countOccurences(inputString, stringToMatch) {
     return n;
 }
 exports.countOccurences = countOccurences;
+function countVowels(inputString) {
+    if (!inputString)
+        return 0;
+    return (inputString.match(/[aeiou]/gi) || []).length;
+}
+exports.countVowels = countVowels;

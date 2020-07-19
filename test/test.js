@@ -3,7 +3,8 @@ const {
   countWords,
   countSpaces,
   countCharacters,
-  countVowels
+  countVowels,
+  countOccurences
 } = require('../index.js');
 
 const input = "Hello, World!, This is a test";
@@ -37,5 +38,11 @@ describe('Count Characters without spaces', function() {
 describe('Count Vowels', function () {
   it('Should return 7', function () {
     assert.equal(countVowels(input), 7);
+  });
+});
+
+describe('Count Occurences', function () {
+  it('Should return 3', function () {
+    assert.equal(countOccurences(input, 'l'), 3);
   });
 });

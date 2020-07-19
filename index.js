@@ -43,20 +43,19 @@ function countOccurences(inputString, stringToMatch) {
     inputString += "";
     stringToMatch += "";
     if(stringToMatch.length <= 0)
-        return (inputString.length + 1);
+        return 0;
     
-    var n = 0;
-    var pos = 0;
-    var step = 1
+    var countOfOccurences = 0;
+    var position = 0;
 
     while(true) {
-        pos = inputString.indexOf(stringToMatch, pos);
-        if(pos >= 0) {
-            ++n;
-            pos += step;
+        position = inputString.indexOf(stringToMatch, position);
+        if(position >= 0) {
+            ++countOfOccurences;
+            position += 1;
         } else break;
     }
-    return n;
+    return countOfOccurences;
 }
 exports.countOccurences = countOccurences;
 function countVowels(inputString) {

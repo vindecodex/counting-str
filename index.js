@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.countCharacters = exports.countSpaces = exports.countWords = exports.countingStr = void 0;
+exports.countCharacters = exports.countOccurences = exports.countSpaces = exports.countWords = exports.countingStr = void 0;
 exports.countingStr = {
     byWordsLength: 0,
     bySpacesLength: 0,
@@ -18,6 +18,7 @@ function countWords(inputString) {
     return splitWords.length;
 }
 exports.countWords = countWords;
+
 function countSpaces(inputString) {
     if (!inputString)
         return 0;
@@ -36,3 +37,24 @@ function countCharacters(inputString, options) {
     return inputCharacterSizeWithoutSpaces;
 }
 exports.countCharacters = countCharacters;
+
+function countOccurences(inputString, stringToMatch) {
+    inputString += "";
+    stringToMatch += "";
+    if(stringToMatch.length <= 0)
+        return (inputString.length + 1);
+    
+    var n = 0;
+    var pos = 0;
+    var step = 1
+
+    while(true) {
+        pos = inputString.indexOf(stringToMatch, pos);
+        if(pos >= 0) {
+            ++n;
+            pos += step;
+        } else break;
+    }
+    return n;
+}
+exports.countOccurences = countOccurences;

@@ -32,12 +32,17 @@ Count Characters without including spaces
 countCharacters("Hello World", { withSpaces: false });
 ```
 
+Count an occurence of a Character/String in another String
+```JavaScript
+countOccurences("Hello World", "l");
+```
+
 |Name           | Arguments                     |  Info                                                   |
 |---------------|-------------------------------|---------------------------------------------------------|
 |countWords     | String                        | returns # of words in a string                          |
 |countSpaces    | String                        | returns # of spaces in a string                         |
 |countCharacters| Object { withSpaces: boolean }| withSpaces: true returns # of characters included space |
-
+|countOccurences| (String, String)              | returns occurences count in a string                    |
 
 #### Feel free to open a pull request to add more features.
 - make clone

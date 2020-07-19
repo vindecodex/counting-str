@@ -16,15 +16,19 @@ function countSpaces(inputString) {
 }
 exports.countSpaces = countSpaces;
 function countCharacters(inputString, options) {
-    if (options === void 0) { options = { withSpaces: true }; }
+    if (options === void 0) { options = { withSpaces: true, withNewLine: true }; }
     if (!inputString)
         return 0;
     var inputCharacterSize = inputString.length;
     var inputSpaceCharacterSize = inputString.split(" ").length - 1;
     var inputCharacterSizeWithoutSpaces = inputCharacterSize - inputSpaceCharacterSize;
-    if (options.withSpaces)
+    var totalNewLines = inputString.split(/\n/).length - 1;
+    if (options.withSpaces && options.withNewLine)
         return inputCharacterSize;
-    return inputCharacterSizeWithoutSpaces;
+    if (!options.withSpaces && options.withNewLine)
+        return inputCharacterSizeWithoutSpaces;
+    if (options.withSpaces && !options.withNewLine)
+        return inputCharacterSize - totalNewLines;
 }
 exports.countCharacters = countCharacters;
 function countVowels(inputString) {

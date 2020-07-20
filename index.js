@@ -1,1 +1,39 @@
-"use strict";function countWords(t){return(t+="")?t.split(" ").length:0}function countSpaces(t){return(t+="")?t.split(" ").length-1:0}function countCharacters(t,e){if(void 0===e&&(e={withSpaces:!0}),!(t+=""))return 0;var c=t.length,n=c-(t.split(" ").length-1);return e.withSpaces?c:n}function countVowels(t){return(t+="")?(t.match(/[aeiou]/gi)||[]).length:0}function countOccurences(t,e){if(e+="",!(t+="")||!e)return 0;if(e.length<=0)return 0;for(var c=0,n=0;(n=t.indexOf(e,n))>=0;)++c,n+=1;return c}exports.__esModule=!0,exports.countOccurences=exports.countVowels=exports.countCharacters=exports.countSpaces=exports.countWords=void 0,exports.countWords=countWords,exports.countSpaces=countSpaces,exports.countCharacters=countCharacters,exports.countVowels=countVowels,exports.countOccurences=countOccurences;
+"use strict";
+exports.__esModule = true;
+exports.countVowels = exports.countCharacters = exports.countSpaces = exports.countWords = void 0;
+function countWords(inputString) {
+    if (!inputString)
+        return 0;
+    var splitWords = inputString.split(' ');
+    return splitWords.length;
+}
+exports.countWords = countWords;
+function countSpaces(inputString) {
+    if (!inputString)
+        return 0;
+    var splitWords = inputString.split(' ');
+    return splitWords.length - 1;
+}
+exports.countSpaces = countSpaces;
+function countCharacters(inputString, options) {
+    if (options === void 0) { options = { withSpaces: true, withNewLine: true }; }
+    if (!inputString)
+        return 0;
+    var inputCharacterSize = inputString.length;
+    var inputSpaceCharacterSize = inputString.split(' ').length - 1;
+    var inputCharacterSizeWithoutSpaces = inputCharacterSize - inputSpaceCharacterSize;
+    var totalNewLines = inputString.split(/\n/).length - 1;
+    if (options.withSpaces && options.withNewLine)
+        return inputCharacterSize;
+    if (!options.withSpaces && options.withNewLine)
+        return inputCharacterSizeWithoutSpaces;
+    if (options.withSpaces && !options.withNewLine)
+        return inputCharacterSize - totalNewLines;
+}
+exports.countCharacters = countCharacters;
+function countVowels(inputString) {
+    if (!inputString)
+        return 0;
+    return (inputString.match(/[aeiou]/gi) || []).length;
+}
+exports.countVowels = countVowels;

@@ -22,7 +22,5 @@
   "devDependencies": {
     "mocha": "^8.0.1"
   },
-  "dependencies": {
-    "serialize-javascript": "^3.1.0"
-  }
+  "dependencies": {}
 }
